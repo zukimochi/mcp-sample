@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 50% 98%;
+    --foreground: 20 40% 20%;
+
+    --card: 30 50% 98%;
+    --card-foreground: 20 40% 20%;
+
+    --popover: 30 50% 98%;
+    --popover-foreground: 20 40% 20%;
+
+    --primary: 25 60% 20%;
+    --primary-foreground: 30 50% 95%;
+
+    --secondary: 25 35% 80%;
+    --secondary-foreground: 25 60% 20%;
+
+    --muted: 25 35% 90%;
+    --muted-foreground: 25 25% 40%;
+
+    --accent: 30 50% 90%;
+    --accent-foreground: 25 60% 20%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 30 50% 95%;
+
+    --border: 25 35% 80%;
+    --input: 25 35% 80%;
+    --ring: 25 60% 20%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 40% 6%;
+    --foreground: 30 50% 95%;
+
+    --card: 20 40% 10%;
+    --card-foreground: 30 50% 95%;
+
+    --popover: 20 40% 8%;
+    --popover-foreground: 30 50% 95%;
+
+    --primary: 25 60% 60%;
+    --primary-foreground: 20 20% 10%;
+
+    --secondary: 25 35% 25%;
+    --secondary-foreground: 30 50% 95%;
+
+    --muted: 25 35% 20%;
+    --muted-foreground: 30 30% 70%;
+
+    --accent: 25 35% 25%;
+    --accent-foreground: 30 50% 95%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 30 50% 95%;
+
+    --border: 25 35% 30%;
+    --input: 25 35% 30%;
+    --ring: 25 60% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .hero {
+    @apply relative h-[70vh] w-full flex items-center justify-center overflow-hidden;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/40 z-10;
+  }
+  
+  .hero-content {
+    @apply relative z-20 text-center text-white max-w-3xl px-4;
+  }
+  
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 py-16 sm:px-6 sm:py-24;
+  }
+  
+  .menu-item {
+    @apply bg-card rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg;
+  }
+
+  .menu-image-container {
+    @apply relative h-48 w-full overflow-hidden;
+  }
+  
+  .menu-image {
+    @apply object-cover w-full h-full transition-transform duration-300 hover:scale-105;
+  }
+}
